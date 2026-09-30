@@ -990,13 +990,13 @@ md"""
 md"Forward message on ``Z``:"
 
 # ╔═╡ e7e4b6d0-bdf0-4a93-9a73-7971e6e33065
-@call_rule typeof(+)(:out, Marginalisation) (m_in1 = NormalMeanVariance(1.0, 1.0), m_in2 = NormalMeanVariance(2.0, 1.0))
+getresult(@call_message_update_rule(node = +, target = :out, m = (in1 = NormalMeanVariance(1.0, 1.0), in2 = NormalMeanVariance(2.0, 1.0))))
 
 # ╔═╡ 2f5415e5-70b1-47ea-9790-7ac953bca538
 md"Backward message on ``X``:"
 
 # ╔═╡ 1b76ab6c-ffa2-40eb-a6c6-55d7097a5108
-@call_rule typeof(+)(:in1, Marginalisation) (m_out = NormalMeanVariance(3.0, 1.0), m_in2 = NormalMeanVariance(2.0, 1.0))
+getresult(@call_message_update_rule(node = +, target = :in1, m = (out = NormalMeanVariance(3.0, 1.0), in2 = NormalMeanVariance(2.0, 1.0))))
 
 # ╔═╡ 965b886e-d294-11ef-1b10-0319896874cf
 md"""
@@ -1018,13 +1018,13 @@ md"""
 md"Forward message on ``Y``:"
 
 # ╔═╡ 1be3121d-be18-46a1-9af9-f108a2257c22
-@call_rule typeof(*)(:out, Marginalisation) (m_A = PointMass(4.0), m_in = NormalMeanVariance(1.0, 1.0))
+getresult(@call_message_update_rule(node = *, target = :out, m = (A = PointMass(4.0), in = NormalMeanVariance(1.0, 1.0))))
 
 # ╔═╡ e5658c95-6cd0-426f-b819-31f9f2c7eaf4
 md"Backward message on ``X``:"
 
 # ╔═╡ 94ca674e-1a01-424c-8657-6510be7097c3
-@call_rule typeof(*)(:in, Marginalisation) (m_out = NormalMeanVariance(2.0, 1.0), m_A = PointMass(4.0))
+getresult(@call_message_update_rule(node = *, target = :in, m = (out = NormalMeanVariance(2.0, 1.0), A = PointMass(4.0))))
 
 # ╔═╡ 965c18f8-d294-11ef-2456-b945a46241f4
 md"""

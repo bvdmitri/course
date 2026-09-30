@@ -24,6 +24,7 @@ begin
 	using Distributions
 	using StatsFuns
 	using RxInfer
+	using ProbitMessagePassingRules
 	using Plots, StatsPlots
 	default(label="", margin=10Plots.pt)
 end
@@ -270,7 +271,7 @@ In a Probit likelihood function, the transfer (a.k.a. _link_) function is a cumu
 \Phi(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{x} \exp \left(-\frac{t^2}{2} \right) \mathrm{d}t \, .
 ```
 
-In RxInfer, there is a special type of distribution called `Probit()`, which can be used as a likelihood function.
+In RxInfer, there is a special type of distribution called `Probit()`, which can be used as a likelihood function. It comes from the package `ProbitMessagePassingRules`, loaded at the top of this notebook.
 
 """
 

@@ -773,9 +773,6 @@ md"""
 # Code
 """
 
-# ╔═╡ dab295ff-5a02-4e4f-8f46-b0842b6bf1ff
-import RxInfer.ReactiveMP: getinterface, materialize!
-
 # ╔═╡ 07fe12dc-501c-407b-ab39-ba9a4845762c
 import RxInfer.Rocket: getrecent
 
@@ -3993,7 +3990,6 @@ uuid = "23338594-aafe-5451-b93e-139f81909106"
 # ╟─f44e0303-dd28-48ad-9de2-7f7882f3923d
 # ╠═e66b2193-87c8-4645-bfcc-643ee006383a
 # ╠═f2a42c4d-9607-4f50-bbda-9a9a4942faab
-# ╠═dab295ff-5a02-4e4f-8f46-b0842b6bf1ff
 # ╠═07fe12dc-501c-407b-ab39-ba9a4845762c
 # ╠═60201d93-64e8-42ce-85ab-8eb661223427
 # ╟─ae8c57ce-b74d-4543-b25b-eee57ad2e415
