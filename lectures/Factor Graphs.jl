@@ -990,13 +990,13 @@ md"""
 md"Forward message on ``Z``:"
 
 # ╔═╡ e7e4b6d0-bdf0-4a93-9a73-7971e6e33065
-getresult(@call_message_update_rule(node = +, target = :out, m = (in1 = NormalMeanVariance(1.0, 1.0), in2 = NormalMeanVariance(2.0, 1.0))))
+getresult(@call_message_update_rule(node = +, target = :out, m = (in = (NormalMeanVariance(1.0, 1.0), NormalMeanVariance(2.0, 1.0)),)))
 
 # ╔═╡ 2f5415e5-70b1-47ea-9790-7ac953bca538
 md"Backward message on ``X``:"
 
 # ╔═╡ 1b76ab6c-ffa2-40eb-a6c6-55d7097a5108
-getresult(@call_message_update_rule(node = +, target = :in1, m = (out = NormalMeanVariance(3.0, 1.0), in2 = NormalMeanVariance(2.0, 1.0))))
+getresult(@call_message_update_rule(node = +, target = (:in, 1), m = (out = NormalMeanVariance(3.0, 1.0), in = (nothing, NormalMeanVariance(2.0, 1.0)))))
 
 # ╔═╡ 965b886e-d294-11ef-1b10-0319896874cf
 md"""
